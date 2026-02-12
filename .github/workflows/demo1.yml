@@ -1,5 +1,9 @@
 name: Event Demo1
 on:
+  pull_request:
+    types:
+      - oppend
+      - closed
   push:
     branches:
       -main
