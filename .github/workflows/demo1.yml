@@ -2,12 +2,11 @@ name: Event Demo1
 on:
   pull_request:
     types:
-      - oppend
+      - opened
       - closed
-  push:
     branches:
-      -main
-      -dev
+      - main
+      - dev
 jobs:
   deploy:
     runs-on: ubuntu_latest
@@ -15,7 +14,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Install NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/node@v3
         with:
           node Vesion: 18  
       - name: Install dependencies
