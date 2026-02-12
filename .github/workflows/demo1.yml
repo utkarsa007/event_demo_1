@@ -5,8 +5,8 @@ on:
       - opened
       - closed
     branches:
-      -main
-      -dev
+      - main
+      - dev
 jobs:
   deploy:
     runs-on: ubuntu_latest
