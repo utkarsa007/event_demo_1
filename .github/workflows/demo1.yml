@@ -1,0 +1,20 @@
+name: Event Demo1
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/node@v3
+        with:
+          node Vesion: 18  
+      - name: Install dependencies
+        run: npm ci
+      - name: Test code
+        run: npm run Test
+      - name: Build code
+        run: npm run Build
+      - name: Deploy project
+        run: echo "Deploying..." 
