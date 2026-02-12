@@ -2,8 +2,8 @@ name: Event Demo1
 on:
   pull_request:
     types:
-      - oppend
-      - close
+      - opend
+      - closed
     branches:
       -main
       -dev
